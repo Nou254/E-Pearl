@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <style>
+        body { font-family: Arial, sans-serif; background: #f4f4f4; padding: 20px; }
+        .container { max-width: 600px; margin: auto; background: white; padding: 30px; border-radius: 8px; }
+        .header { text-align: center; color: #333; }
+        .btn { display: inline-block; background: #4CAF50; color: white; padding: 12px 24px; text-decoration: none; border-radius: 4px; }
+        .footer { margin-top: 20px; font-size: 12px; color: #999; }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <div class="header">
+            <h1>E-Pearl – Owner Verification</h1>
+        </div>
+        <p>Dear {{ owner_name }},</p>
+        <p>You have been registered as the legal owner of <strong>{{ venue.business_name }}</strong> on the E-Pearl platform.</p>
+        <p>Please verify your ownership by clicking the button below:</p>
+        <p style="text-align: center;">
+            <a href="{{ invite_url }}" class="btn">Verify Ownership</a>
+        </p>
+        <p>If the button doesn't work, copy and paste this link into your browser:</p>
+        <p><code>{{ invite_url }}</code></p>
+        <p>If you did not register this venue, please ignore this email.</p>
+        <div class="footer">
+            This is an automated message from E-Pearl.<br>
+            Do not reply to this email.
+        </div>
+    </div>
+</body>
+</html>
